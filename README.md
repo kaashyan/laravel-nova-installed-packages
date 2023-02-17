@@ -23,14 +23,15 @@ Next up, you must register the tool with Nova. This is typically done in the too
 
 // in app/Providers/NovaServiceProvider.php
 
-// ...
-
-public function tools()
+```bash
+  public function tools()
 {
     return [
-        // ...
         new \Standardpackage\NovaInstalledPackages\Tool(),
     ];
 }
+
+```
+
 
 
