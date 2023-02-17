@@ -11,6 +11,6 @@ Step:- 1)
 
 ```
 
-composer require indianic/currency-management-new
+composer require indianic/laravel-nova-installed-packages
 
 
