@@ -1,5 +1,5 @@
 {
-    "name": "indianic/nova-installed-packages",
+    "name": "indianic/laravel-nova-installed-packages",
     "description": "A tool that shows nova-specific packages installed on your application.",
     "keywords": [
         "laravel",
