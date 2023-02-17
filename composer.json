@@ -1,0 +1,62 @@
+{
+    "name": "indianic/nova-installed-packages",
+    "description": "A tool that shows nova-specific packages installed on your application.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../nova"
+        }
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "indianic",
+            "email": "subhash.kaashyan@indainic.com",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "haydenpierce/class-finder": "^0.0.2",
+        "joshdifabio/composed": "^1.0",
+        "laravel/nova": "*",
+        "nikic/php-parser": "^4.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.6",
+        "phpunit/phpunit": "7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Standardpackage\\NovaInstalledPackages\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Standardpackage\\NovaInstalledPackages\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Standardpackage\\NovaInstalledPackages\\ToolServiceProvider"
+            ]
+        },
+        "nova": {
+            "install": [
+                {
+                    "type": "tools",
+                    "provider": "new \\Standardpackage\\NovaInstalledPackages\\Tool()"
+                }
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
